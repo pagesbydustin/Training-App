@@ -35,31 +35,25 @@ function LightingComponent() {
     return (
 
         <>
+            <Navbar>
+                <NavbarBrand>
 
+                    <img
+                        src="https://hopetemecula.org/wp-content/uploads/2015/03/newlogo-e1597113852251.jpg"
+                        width="30"
+                        height="30"
+                        className="d-inline-block align-top"
+                        alt="HLC logo" />{" "}
+                    HLC
 
-            <Card>
-                <Card.Header as={"h3"}>
-                    Lighting {pageNumber}
-                </Card.Header>
-                <Card.Body>
-                    <Row><Col><Card.Img className='w-50' variant='top' src='https://hopetemecula.org/wp-content/uploads/2015/03/newlogo-e1597113852251.jpg' /></Col></Row>
-                    <Row style={{ height:300 }}>
-                        <Col lg={2} align-middle><FiChevronLeft size={35} onClick={ goBack }/></Col>
-                        
-                        <Col lg={8} >
-                        <p>More testing</p>
-                            { ItemRender }
-                        </Col>
-                        <Col lg={2}><FiChevronRight size={35} onClick={ advancePage }/></Col>
-                    </Row>
-
-
-                </Card.Body>
-                <Card.Footer className='bg-light'>
-                    <Card.Text>2024</Card.Text>
-                </Card.Footer>
-            </Card>
-
+                </NavbarBrand>
+                <Nav activeKey={"Lighting"}>
+                    <NavLink key={"/"} href='/'>Home</NavLink>
+                    <NavLink key={"lighting"} href='/lighting'>Lighting</NavLink>
+                </Nav>
+            </Navbar>
+            <Container>
+            </Container>
         </>
 
     );

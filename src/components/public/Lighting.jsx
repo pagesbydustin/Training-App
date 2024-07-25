@@ -6,56 +6,55 @@ import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 function LightingComponent() {
   const [pageNumber, setPageNumber] = useState(1);
   const maxPages = 5;
+
   function advancePage() {
-    if (pageNumber < maxPages && pageNumber > 0) {
+    if (pageNumber < maxPages) {
       setPageNumber(pageNumber + 1);
     }
-    return;
   }
-
   function goBack() {
-    if (pageNumber <= maxPages && pageNumber > 1) {
+    if (pageNumber > 1) {
       setPageNumber(pageNumber - 1);
     }
-    return;
   }
 
-  let ItemRender = null;
+  const imgSrc = "https://hopetemecula.org/wp-content/uploads/2015/03/newlogo-e1597113852251.jpg";
 
-  switch (pageNumber) {
-    case 1:
-    case 2:
-    case 3:
-    case 4:
-    case 5:
-      ItemRender = <Card.Text>Page {pageNumber}</Card.Text>;
-      break;
+  const ItemText = pageNumber === 1 ? "Turn on the programming device." : "Nothing here yet!";
+  const ItemPageRender = `Page ${pageNumber}`; // Use template literal for clarity
 
-    default:
-      ItemRender = <Card.Text>Page Unknown</Card.Text>;
-  }
   return (
     <>
       <Container fluid>
         <Row>
           <Col>
+          </Col>
+        </Row>
+        <Row>
+          <Col lg={2}></Col>
+          <Col lg={8}>
             <Card>
               <Card.Header>
                 <h3>Lighting Training</h3>
               </Card.Header>
               <Card.Body>
                 <Card.Img
+                  style={{ width: "150px" }}
                   variant="top"
-                  src=""
-                ></Card.Img>
-                {ItemRender}
+                  src={imgSrc}
+                />
+                <Card.Text>
+                  {ItemText}
+                </Card.Text>
+                
               </Card.Body>
+              <Card.Footer>
+              <Card.Text>
+                  {ItemPageRender}
+                </Card.Text>
+              </Card.Footer>
             </Card>
           </Col>
-        </Row>
-        <Row>
-          <Col lg={2}></Col>
-          <Col lg={8}></Col>
           <Col lg={2}></Col>
         </Row>
       </Container>

@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { Card, Container, Col, Row } from "react-bootstrap";
 import { useState } from "react";
-import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 function LightingComponent() {
   const [pageNumber, setPageNumber] = useState(1);

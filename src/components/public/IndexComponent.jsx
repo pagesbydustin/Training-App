@@ -9,7 +9,7 @@ import {
   ListGroup,
 } from "react-bootstrap";
 
-import { FiBookOpen } from "react-icons/fi";
+import { FiBookOpen } from 'react-icons/fi';
 
 export default function IndexComponent() {
   return (

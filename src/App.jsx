@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import IndexComponent from './components/public/IndexComponent';
-import LightingComponent from './components/public/Lighting';
+import LightingComponent from './components/public/LightingComponent';
 import { Container, Nav, Navbar, NavbarBrand, NavLink } from 'react-bootstrap';
 
 import './assets/css/App.css';

@@ -2,7 +2,7 @@
 import { Card, Container, Col, Row } from "react-bootstrap";
 import { useState } from "react";
 
-import { PDFViewer } from '../protected/pdfReader'
+import PDFViewer from './PDFViewer'
 
 
 function LightingComponent() {
@@ -48,10 +48,12 @@ function LightingComponent() {
                 <Card.Text>
                   {ItemText}
                 </Card.Text>
+
                 <PDFViewer />
+
               </Card.Body>
               <Card.Footer>
-              <Card.Text>
+                <Card.Text>
                   {ItemPageRender}
                 </Card.Text>
               </Card.Footer>

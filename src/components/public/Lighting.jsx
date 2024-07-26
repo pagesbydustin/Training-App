@@ -2,37 +2,8 @@
 import { Card, Container, Col, Row } from "react-bootstrap";
 import { useState } from "react";
 
-import React, { useState, useRef } from 'react';
-import { Document, Page, pdfjs } from 'react-pdf';
+import { PDFViewer } from '../protected/pdfReader'
 
-const PDFViewer = () => {
-  const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1);
-  const pdfRef = useRef();
-
-  const onDocumentLoadSuccess = ({ numPages }) => {
-    setNumPages(numPages);
-  };
-
-  const handlePageChange = (offset) => {
-    setPageNumber(pageNumber + offset);
-  };
-
-  return (
-    <div>
-      <Document file="your-pdf-file.pdf" onLoadSuccess={onDocumentLoadSuccess} ref={pdfRef}>
-        <Page pageNumber={pageNumber} width={600} />
-      </Document>
-      <p>Page {pageNumber} of {numPages}</p>
-      {/* Add buttons for page navigation */}
-    </div>
-  );
-};
-
-export PDFViewer;
-
-
-import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 function LightingComponent() {
   const [pageNumber, setPageNumber] = useState(1);
@@ -77,7 +48,7 @@ function LightingComponent() {
                 <Card.Text>
                   {ItemText}
                 </Card.Text>
-                
+                <PDFViewer />
               </Card.Body>
               <Card.Footer>
               <Card.Text>

@@ -1,8 +1,24 @@
-# React + Vite
+# Hope Training app
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Lighting
 
-Currently, two official plugins are available:
+From the homepage you can see the choice to go to lighting section.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### In The lighting section of training.
+
+Follow the instructions and read all the resource materials provided. I will have a list here of all the files needed for all the training.
+
+#### List of documents and a link to them
+
+1. Configuration Tool Spec Sheet - https://cree.widen.net/s/lgxqnxc5fq/smartcastr-wireless-configuration-tool-spec-sheet
+2. Install Guide - https://cree.widen.net/s/xbm5tggzlc/smartcastr-wireless-configuration-tool-install-guide
+
+#### Configuration tool
+
+- Part # CCT-CWC-1
+
+- Part Name - Wireless Configuration Tool
+
+#### Lights and Switches
+
+- Cree Wireless Wall Controls With **SmartCast®** Technology Wireless Dimmer and Wireless Switch Includes:CSC-CWD, CSC-CWS, CSC-CCD

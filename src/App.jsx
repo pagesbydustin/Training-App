@@ -1,35 +1,48 @@
 import { Container, Row, Col } from 'react-bootstrap';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import NavComponent from './components/NavComponent';
+import MainComponent from './components/MainComponent';
+import LightingComponent from './components/LightingComponent';
 
-import './App.css';
 import './assets/css/bootstrap.min.css';
+import './App.css';
+
 
 function App() {
 
 
   return (
     <>
-      <Row id='navRow'>
-        <Col>
-          {/** Nav Component */}
-          <NavComponent />
-        </Col>
-      </Row>
+      <Router>
+
       <Container fluid>
-
-        <Row id='bodyRow'>
-          <Col></Col>
-          <Col lg={8}>
-            {/** Body Component(s) */}
-            <Container><h1>Welcome</h1></Container>
+        <Row id='navRow'>
+          <Col>
+            {/** Nav Component */}
+            <NavComponent />
           </Col>
-          <Col></Col>
         </Row>
+        
 
-      </Container>
-      <Row id='footerRow'>
-        <Col>{/** Footer Component(s) */}</Col>
-      </Row>
+          <Row id='bodyRow' className='body-row'>
+            <Col></Col>
+            <Col lg={8}>
+              {/** Body Component(s) */}
+              
+                <Routes>
+                  <Route path='/' element={<MainComponent />} />
+                  <Route path='/lighting' element={<LightingComponent />} />
+                </Routes>
+         
+            </Col>
+            <Col></Col>
+          </Row>
+
+        </Container>
+        <Row id='footerRow'>
+          <Col>{/** Footer Component(s) */}</Col>
+        </Row>
+      </Router>
     </>
   )
 }

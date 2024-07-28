@@ -1,0 +1,11 @@
+#root {
+  width: 90%;
+  margin: 0 auto;
+  margin-top:50px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.mainImg{
+  max-width: 200px;
+}

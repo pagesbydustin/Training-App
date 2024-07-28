@@ -4,8 +4,7 @@ import NavComponent from './components/NavComponent';
 import MainComponent from './components/MainComponent';
 import LightingComponent from './components/LightingComponent';
 
-import './assets/css/bootstrap.min.css';
-import './App.css';
+
 
 
 function App() {

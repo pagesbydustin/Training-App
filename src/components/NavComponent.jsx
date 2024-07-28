@@ -25,8 +25,8 @@ export default function NavComponent() {
     <Navbar variant="light" bg="light" fixed="top" expand="md">
       <Navbar.Brand>
         <Image
-          src="src/assets/images/Hope-logo.png"
-          alt="Your Logo"
+          src="images/Hope-logo.png"
+          alt="HLC Logo"
           width={50}
         />
       </Navbar.Brand>

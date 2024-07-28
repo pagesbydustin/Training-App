@@ -25,9 +25,9 @@ a:hover {
 body {
   margin: 0px;
   display: flex;
-  min-width: 320px;
+  min-width: 1024px;
   min-height: 100vh;
-
+  text-align: center;
 }
 
 h1 {
@@ -36,5 +36,6 @@ h1 {
 }
 
 .body-row{
-  height: 550px
+  height: 550px;
+  text-align: center;
 }

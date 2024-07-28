@@ -38,9 +38,9 @@ export default function NavComponent() {
         <Nav className="ms-auto" defaultActiveKey={"home"}>
           <NavItem>
             <NavLink
-              eventKey={"home"}
               href="/"
-              active={isActive}
+              active={isActive === "home"}
+              eventKey={"home"}
               onClick={() => setIsActive("home")}
             >
               Home
@@ -48,9 +48,9 @@ export default function NavComponent() {
           </NavItem>
           <NavItem>
             <NavLink
-              eventKey={"lighting"}
               href="/lighting"
-              active={isActive}
+              active={isActive === "lighting"}
+              eventKey={"lighting"}
               onClick={() => setIsActive("lighting")}
             >
               Lighting
@@ -58,9 +58,9 @@ export default function NavComponent() {
           </NavItem>
           <NavItem>
             <NavLink
-              eventKey={"help"}
               href="/help"
-              active={isActive}
+              active={isActive === "help"}
+              eventKey={"help"}
               onClick={() => setIsActive("help")}
             >
               <BiHelpCircle size={20} />

@@ -15,6 +15,11 @@ import { useState } from "react";
 export default function NavComponent() {
   const [expanded, setExpanded] = useState(false);
   const [isActive, setIsActive] = useState("home");
+  const [searchTerm, setSearchTerm] = useState("Search");
+
+  const handleSearchButtonClick = () => {
+    console.log("Search term: ", searchTerm);
+  };
 
   return (
     <Navbar variant="light" bg="light" fixed="top" expand="md">
@@ -32,27 +37,48 @@ export default function NavComponent() {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ms-auto" defaultActiveKey={"home"}>
           <NavItem>
-            <NavLink eventKey={"home"} href="/">
+            <NavLink
+              eventKey={"home"}
+              href="/"
+              active={isActive}
+              onClick={() => setIsActive("home")}
+            >
               Home
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink eventKey={"lighting"} href="/lighting">
+            <NavLink
+              eventKey={"lighting"}
+              href="/lighting"
+              active={isActive}
+              onClick={() => setIsActive("lighting")}
+            >
               Lighting
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink eventKey={"help"} href="/help">
+            <NavLink
+              eventKey={"help"}
+              href="/help"
+              active={isActive}
+              onClick={() => setIsActive("help")}
+            >
               <BiHelpCircle size={20} />
             </NavLink>
           </NavItem>
           <NavItem>
             <Form className="d-flex align-items-center">
-              <FormControl type="input" placeholder="Search" id="search-bar" />
+              <FormControl
+                type="input"
+                placeholder="Search"
+                id="search-bar"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
               <Button
                 variant="dark"
                 className="ms-2"
-                onClick={() => console.log("Search Term - ")}
+                onClick={handleSearchButtonClick}
               >
                 Go
               </Button>

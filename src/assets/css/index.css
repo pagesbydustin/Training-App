@@ -39,3 +39,9 @@ h1 {
   height: 550px;
   text-align: center;
 }
+.footer{
+  text-align:center;
+  display:flex;
+  background-color: fff;
+  color: #cecece;
+}

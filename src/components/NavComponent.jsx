@@ -4,25 +4,28 @@ import {
   Nav,
   NavItem,
   NavLink,
-  Tooltip,
   Button,
   Form,
   FormControl,
 } from "react-bootstrap";
 import { BiHelpCircle } from "react-icons/bi";
 import { useState } from "react";
+import { useLocation } from "react-router";
+
+
 
 export default function NavComponent() {
   const [expanded, setExpanded] = useState(false);
-  const [isActive, setIsActive] = useState("home");
+  {/** const [isActive, setIsActive] = useState("home"); */ }
   const [searchTerm, setSearchTerm] = useState("Search");
-
+  const location = useLocation();
+  const currentPath = location.pathname;
   const handleSearchButtonClick = () => {
     console.log("Search term: ", searchTerm);
   };
 
   return (
-    <Navbar variant="light" bg="light" fixed="top" expand="md">
+    <Navbar variant="primary" bg="secondary" fixed="top" expand="md">
       <Navbar.Brand>
         <Image
           src="images/Hope-logo.png"
@@ -35,33 +38,20 @@ export default function NavComponent() {
         onClick={() => setExpanded(!expanded)}
       />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="ms-auto" defaultActiveKey={"home"}>
+        <Nav className="ms-auto" activeKey={currentPath}>
           <NavItem>
-            <NavLink
-              href="/"
-              active={isActive === "home"}
-              eventKey={"home"}
-              onClick={() => setIsActive("home")}
-            >
+            <NavLink href="/" >
               Home
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink
-              href="/lighting"
-              active={isActive === "lighting"}
-              eventKey={"lighting"}
-              onClick={() => setIsActive("lighting")}
-            >
+            <NavLink href="/lighting" >
               Lighting
             </NavLink>
           </NavItem>
           <NavItem>
             <NavLink
               href="/help"
-              active={isActive === "help"}
-              eventKey={"help"}
-              onClick={() => setIsActive("help")}
             >
               <BiHelpCircle size={20} />
             </NavLink>

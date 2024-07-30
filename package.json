@@ -28,7 +28,7 @@
     "eslint-plugin-react-refresh": "^0.4.7",
     "vite": "^5.3.4"
   },
-  "description": "Training Hope Technology",
+  "description": "Training For Hope's Technology",
   "main": "vite.config.js",
   "keywords": [
     "Training",

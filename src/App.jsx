@@ -4,6 +4,7 @@ import NavComponent from './components/NavComponent';
 import MainComponent from './components/MainComponent';
 import LightingComponent from './components/LightingComponent';
 import HelpComponent from './components/HelpComponent.jsx';
+import FooterComponent from './components/FooterComponent.jsx';
 
 
 
@@ -41,7 +42,7 @@ function App() {
 
         </Container>
         <Row id='footerRow'>
-          <Col>{/** Footer Component(s) */}</Col>
+          <Col><FooterComponent /></Col>
         </Row>
       </Router>
     </>
